@@ -1,0 +1,138 @@
+{
+  "resourceType": "Bundle",
+  "id": "ExamplePatientBundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient1",
+        "name": [
+          {
+            "given": [
+              "Jane"
+            ],
+            "family": "Doe"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1970-01-01"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/Patient1"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner1",
+        "name": [
+          {
+            "given": [
+              "John"
+            ],
+            "family": "Smith"
+          }
+        ],
+        "gender": "male"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/Practitioner1"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Patient1Encounter1",
+        "status": "finished",
+        "class": {
+          "code": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/Patient1"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/Practitioner1"
+            }
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "123456",
+                "display": "Example reason code"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/Patient1Encounter1"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient2",
+        "name": [
+          {
+            "given": [
+              "Elizabeth"
+            ],
+            "family": "Bethany"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1960-01-01"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/Patient1"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Patient2Encounter1",
+        "status": "finished",
+        "class": {
+          "code": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/Patient2"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/Practitioner1"
+            }
+          }
+        ],
+        "period": {
+          "start": "2023-05-16T19:37:08+02:00",
+          "end": "2023-05-16T20:37:08+02:00"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "Z12.31",
+                "system": "http://hl7.org/fhir/sid/icd-10-cm"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/Patient2Encounter1"
+      }
+    }
+  ]
+}

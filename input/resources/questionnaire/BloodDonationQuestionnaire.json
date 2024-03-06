@@ -1,0 +1,2022 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "BloodDonationQuestionnaire",
+    "url": "http://example.org/fhir/Questionnaire/BloodDonationQuestionnaire",
+    "name": "BloodDonationQuestionnaire",
+    "title": "Blood Donation Form",
+    "status": "active",
+    "experimental": true,
+    "date": "2024-03-01",
+    "publisher": "BIN Research Group",
+    "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+          "valueCanonical": "http://fhir.org/guides/cqf/us/common/Library/BloodDonationInitialExpressions"
+        }
+      ],
+    "item": [
+      {
+        "linkId": "conservenBarcode",
+        "text": "Konserven-Barcode",
+        "type": "attachment"
+      },
+      {
+        "linkId": "personalInformation",
+        "text": "Persoenliche Informationen",
+        "type": "group",
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Title Familyname"
+                }
+              }
+            ],
+            "linkId": "personalInformation|titleFamilyname",
+            "text": "Titel, Familienname",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "First name"
+                }
+              }
+            ],
+            "linkId": "personalInformation|firstname",
+            "text": "Vorname",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Street Number"
+                }
+              }
+            ],
+            "linkId": "personalInformation|streetNumber",
+            "text": "Straße/Nr./Stiege/Tuer",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Postal Code"
+                }
+              }
+            ],
+            "linkId": "personalInformation|postalCode",
+            "text": "PLZ",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "City"
+                }
+              }
+            ],
+            "linkId": "personalInformation|city",
+            "text": "Ort",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Phone"
+                }
+              }
+            ],
+            "linkId": "personalInformation|phone",
+            "text": "Telefon",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Email"
+                }
+              }
+            ],
+            "linkId": "personalInformation|email",
+            "text": "E-Mail",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Previous Familyname"
+                }
+              }
+            ],
+            "linkId": "personalInformation|previousFamilyname",
+            "text": "Frueherer Familienname",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Birthdate"
+                }
+              }
+            ],
+            "linkId": "personalInformation|birthdate",
+            "text": "Geburtsdatum",
+            "type": "date"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Gender"
+                }
+              }
+            ],
+            "linkId": "personalInformation|gender",
+            "text": "Geschlecht",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "female",
+                  "display": "w"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "male",
+                  "display": "m"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "clinicalInformation",
+        "text": "Klinische Informationen",
+        "type": "group",
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Date"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|date",
+            "text": "Datum",
+            "type": "date"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Blood Pressure"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|bloodPressure",
+            "text": "RR mmHg",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Pulse"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|pulse",
+            "text": "Puls/min",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Temperature"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|temperature",
+            "text": "Temp. °C",
+            "type": "decimal"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Hemoglobin"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|hemoglobin",
+            "text": "HB g/dl",
+            "type": "decimal"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Photographic ID"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|photographicId",
+            "text": "Lichtbildausweis",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Puncture"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|puncture",
+            "text": "Punktion",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "left",
+                  "display": "links"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "right",
+                  "display": "rechts"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "WNV Test"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|wnvTest",
+            "text": "WNV-Test",
+            "type": "boolean"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "No TK"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|noTk",
+            "text": "Kein TK",
+            "type": "boolean"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Remarks"
+                }
+              }
+            ],
+            "linkId": "clinicalInformation|remarks",
+            "text": "Bemerkungen",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "linkId": "healthQuestions",
+        "text": "Gesundheitliche Fragen",
+        "type": "group",
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Do you feel healthy"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|feelHealthy",
+            "text": "1. Fuehlen Sie sich gesund?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Weigh over 50kg"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|weighOver50",
+            "text": "2. Wiegen Sie ueber 50 kg?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Donated Blood Before"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|donatedBlood",
+            "text": "3. Haben Sie schon einmal Blut, Blutplaettchen oder Blutplasma oder Doppel-Erythrozyten gespendet?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|donatedBlood",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Last Blood Donation Date"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|lastBloodDonation",
+            "text": "3.a Wenn ja, wann zuletzt?",
+            "type": "date"
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|donatedBlood",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Last Blood Donation Reaction"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|lastBloodDonationReaction",
+            "text": "3.b Wenn ja, haben Sie diese bisherigen Spenden gut vertragen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "personalInformation|gender",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "female"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Pregnancy in Last 6 Months"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|pregnantLast6Months",
+            "text": "4. Weibliche Spender: Sind Sie oder waren Sie innerhalb der letzten 6 Monate schwanger oder stillen Sie?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|pregnantLast6Months",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "End of last Pregnancy"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|pregnantUntil",
+            "text": "4.a Wenn ja, bis wann waren Sie schwanger?",
+            "type": "date"
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "personalInformation|gender",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "female"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Given Birth"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|givenBirth",
+            "text": "5. Weibliche Spender: Haben Sie jemals ein Kind geboren?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Currently in medical treatment or sick leave"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|currentTreatmentSickLeave",
+            "text": "6. Sind Sie derzeit in aerztlicher Behandlung oder im Krankenstand oder auf Rehabilitation/Kur?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|currentTreatmentSickLeave",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Since when and why"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|treatmentSickLeaveDetails",
+            "text": "6.a Wenn ja, seit wann und warum?",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Taking medication regularly"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|regularMedication",
+            "text": "7.1 Nehmen Sie staendig Medikamente ein?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|regularMedication",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Which medications and when last taken?"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|regularMedicationDetails",
+            "text": "7.1a Welche und wann zuletzt?",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Medication in the last 4 weeks"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|medicationLast4Weeks",
+            "text": "7.2 Haben Sie in den letzten 4 Wochen Medikamente (z.B. Schmerzmittel, Antibiotika, Hormone) eingenommen oder Injektionen bekommen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|medicationLast4Weeks",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Which medications and when last taken"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|medicationLast4WeeksDetails",
+            "text": "7.2a Wenn ja, welche und wann zuletzt?",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Medication for acne in the last 12 months"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|acneMedicationLast12Months",
+            "text": "8.1 Haben Sie in den letzten 12 Monaten ein Medikament gegen Akne  (z.B. Isotretinoin, Ciscutan...) eingenommen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Medication to prevent a virus infection in the last 12 months"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|virsuMedicationLast12Months",
+            "text": "8.2 Haben Sie in den letzten 12 Monaten Medikamente, die eine Virusinfektion ( z.B. mit HIV) verhindern sollen, eingenommen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Acitretin medication in the last 3 years"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|acitretinMedicationLast3Years",
+            "text": "8.3 Haben Sie in den letzten 3 Jahren das Medikament Acitretin ( z.B. Neotigason, Keracutan... )wegen Hauterkrankungen eingenommen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Dental or minor surgical treatment in the last 4 weeks"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|recentDentalSurgicalTreatment",
+            "text": "9. Haben Sie sich in den letzten 4 Wochen einer zahnaerztlichen Behandlung oder einem kleineren chirurgischen Eingriff (z.B. Muttermal-Entfernung) unterzogen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Vaccinated in the last 4 weeks"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|vaccinatedLast4Weeks",
+            "text": "10. Wurden Sie innerhalb der letzten 4 Wochen geimpft (auch Schluckimpfungen)?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|vaccinatedLast4Weeks",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Which vaccinations within the last 4 weeks"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|vaccinationReason",
+            "text": "10.a Wenn ja, wogegen?",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Received passive immunization in the last 12 months"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|passiveImmunizationLast12Months",
+            "text": "11. Haben Sie in den letzten 12 Monaten eine passive Impfung ( z.B. nach Tierbiss gegen Tollwut) erhalten?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Misuse of alcohol medications or drugs"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|alcoholMedicationMisuse",
+            "text": "12.1 Konsumieren Sie Drogen (auch Partydrogen wie Ecstasy)? Verwenden Sie Alkohol oder Medikamente in missbraeuchlicher Weise?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Injected or snorted drugs"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|injectedSnortedDrugs",
+            "text": "12.2 Haben Sie sich jemals Drogen gespritzt oder diese geschnupft?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Muscle building substances"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|muscleBuildingSubstances",
+            "text": "13. Haben Sie sich jemals Praeparate fuer den Muskelaufbau gespritzt?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Current allergy or desensitization"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|currentAllergyDesensitization",
+            "text": "15. Leiden Sie aktuell an einer Allergie oder lassen Sie derzeit eine Desensibilisierung durchfuehren?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Current skin inflammation"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|skinInflammation",
+            "text": "16. Haben Sie derzeit entzuendliche offene Hautstellen oder Hautausschlag, Fieberblasen, Blaeschen im Mund oder an anderen Koerperstellen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Tick bite in last 8 weeks"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|tickBiteLast8Weeks",
+            "text": "17. Hatten Sie in den letzten 8 Wochen einen Zeckenstich?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Infection in last 4 weeks"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|infectionLast4Weeks",
+            "text": "18. Hatten Sie in den letzten 4 Wochen einen banalen Infekt (z.B. Husten, Schnupfen), einen fiebrhaften Infekt (Fieber ueber 38°C) oder Durchfall oder Kontakt zu Personen mit Infektionskrankheiten (z.B. Grippe, Masern, Mumps...)?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Tattooed or pierced in last 4 months"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|tattooedPiercedLast4Months",
+            "text": "19. Haben Sie sich in den letzten 4 Monaten taetowieren (auch Permanent Make up), piercen, ins Ohr stechen oder akupunktieren lassen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|tattooedPiercedLast4Months",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Tattoo or piercing at a medical facility"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|tattooPiercingMedicalFacility",
+            "text": "19.a Wenn ja, war das in einer medizinischen Einrichtung?",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Contact with foreign blood"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|foreignBloodContact",
+            "text": "20. Hatten Sie in den letzten 4 Monaten einen Kontakt mit Fremdblut?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Unexplained fever or lymph node swelling"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|unexplainedFeverSwelling",
+            "text": "21. Hatten Sie in den letzten 4 Monaten unklare Fieber, Lymphknotenschwellung, Nachtschweiß oder unklaren Gewichtsverlust?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Hospital stay or medical treatment"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|hospitalStayTreatment",
+            "text": "22. Waren Sie in den letzten 4 Monaten im Krankenhaus oder in einer medizinischen Einrichtung?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Contact with infectious diseases"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|contactInfectiousDiseases",
+            "text": "23. Hatten Sie in den letzten 6 Monaten engen Kontakt zu Personen, die an Hepatitis B, Hepatitis C, HIV, Syphilis oder Tuberkulose leiden?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Heart or circulatory disease"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|heartCirculatoryDisease",
+            "text": "24. Haben oder hatten Sie eine Herz-/Kreislaufkrankung(Bluthochdruck, Herzschwäche, Herzinfarkt, Herzrhythmus- störungen, Kollapsneigung, Schlaganfall, Durchblutungsstörungen, Thrombosen)?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Chronic illness"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|chronicIllness",
+            "text": "25. Leiden oder litten Sie an einer chronischen Magen/Darmerkrankung, Atemwegserkrankung, Autoimmunerkrankung, Blutgerinnungsstoerung, Diabetes, Epilepsie, Krebs, Nierenerkrankung, Rheuma, Osteomyelitis, neurologische Erkrankung?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Blood products or coagulation factors"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|bloodProductsCoagulationFactors",
+            "text": "26. Haben Sie jemals Blutkonserven und/oder Gerinnungsfaktoren erhalten?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|bloodProductsCoagulationFactors",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Blood products or coagulation factors reasons"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|bloodProductsCoagulationFactorsReasons",
+            "text": "26.a Wenn ja, wann und warum?",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Stay outside of Austria"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|stayOutsideAustria",
+            "text": "27. Waren Sie in den letzten 6 Monaten außerhalb von oesterreich?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "enableWhen": [
+              {
+                "question": "healthQuestions|stayOutsideAustria",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "yes"
+                }
+              }
+            ],
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Where outside Austria"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|whereOutsideAustria",
+            "text": "27.a Wenn ja, wo?",
+            "type": "string"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Born or stayed outside of Europe"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|bornStayedOutsideEurope",
+            "text": "28. Wurden Sie außerhalb von Europa geboren oder haben Sie sich jemals laenger als durchgehend 6 Monate außerhalb Europas aufgehalten?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Stay in West Nile Virus risk area"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|westNileVirusRiskArea",
+            "text": "29. Waren Sie in den letzten 4 Wochen in einem Westnil-Virus-Infektionsgebiet wie z.B. in einem aktuellen europaeischen Risikogebiet oder USA, Kanada?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Past Infections"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|infectionLast4Months",
+            "text": "30. Hatten Sie eine der folgenden Infektionen: HIV, Leberentzündung (Hepatitis), Syphilis, Chagas-Krankheit, Dengue-Fieber, Leishmaniose, Lepra, Babesiose, HTLV-I/II, Rickettsiose, Schlafkrankheit, Malaria oder andere?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Risk of tuberculosis or similar diseases"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|tuberculosisRisk",
+            "text": "31. Waren Sie in den letzten 2 Jahren an Tuberkulose, Q-Fieber, Brucellose, Borreliose oder in den letzten 6 Monaten an Toxoplasmose, Mononukleose erkrankt?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Family history of prion disease"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|prionDiseaseFamilyHistory",
+            "text": "32. Wurde bei Ihnen oder einem Familienangehoerigen jemals die Creutzfeldt-Jakob’sche Erkrankung oder eine andere von Prionen verursachte Erkrankung vermutet oder festgestellt?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Stay in the UK between 1980 and 1996"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|ukStay1980To1996",
+            "text": "33. Haben Sie sich zwischen 1980 und 1996 insgesamt mehr als 6 Monate im Vereinigten Koenigreich Großbritannien und Nordirland aufgehalten?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Treatment with growth hormones before 1990"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|growthHormoneTreatmentBefore1990",
+            "text": "34. Wurden Sie vor 1990 mit Wachstumshormonen oder einem anderen Hypophysenextrakt behandelt?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Undergone stereotactic surgery"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|stereotacticSurgery",
+            "text": "35. Haben Sie sich einer stereotaktischen Operation (Gehirneingriff mittels Sonde) unterzogen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Organ or tissue transplant"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|organTissueTransplant",
+            "text": "36. Wurden Ihnen jemals Organe oder menschliches/tierisches Gewebe uebertragen (z.B. Hornhaut-, Gehirnhauttransplantat, Herzklappen, Knochen, Knorpel oder Frischzellen)?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Sexual partner with sexually transmitted infection in last 4 months"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|stiPartnerLast4Months",
+            "text": "37. Hatten Sie in den letzten 4 Monaten eine/n Sexualpartner:in, die/der an einer sexuell uebertragbaren Infektion erkrankt ist?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "More than 3 sexual partners in last 3 months"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|multipleSexualPartnersLast3Months",
+            "text": "38. Hatten Sie in den letzten 3 Monaten mehr als 3 Sexualpartner:innen oder Sex mit einer Person, bei der Sie wissen oder annehmen muessen, dass diese in den letzten 3 Monaten mehr als 3 verschiedene Sexualpartner:innen hatte?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Unprotected sex with new partners in last 4 weeks"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|unprotectedSexNewPartnersLast4Weeks",
+            "text": "39. Hatten Sie in den letzten 4 Wochen ungeschuetzten (auch einmaligen) Sexualkontakt mit neuen Sexualpartner:innen?",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Agreement on blood and blood components"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|agreementBloodComponents",
+            "text": "Ich bin damit einverstanden, dass mir Blut und Blutbestandteile entnommen werden. Das Blut wird zur Herstellung von Blutprodukten verwendet und auf verschiedene Krankheiten und gesundheitsrelevante Blutwerte getestet.",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Consent to use residual blood for research"
+                }
+              }
+            ],
+            "linkId": "healthQuestions|consentUseResidualBloodResearch",
+            "text": "Restmaterial der Blutspende kann fuer wissenschaftliche Zwecke und zur Entwicklung neuer Testmethoden verwendet werden.",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Awareness of potential infections and voluntary exclusion"
+                }
+              }
+            ],
+            "linkId": "consentQuestions|awarenessOfInfections",
+            "text": "Die Hinweise auf moegliche Infektionskrankheiten und den 'freiwilligen Selbstausschluss' habe ich erhalten, gelesen und verstanden.",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Informed about donor risks"
+                }
+              }
+            ],
+            "linkId": "consentQuestions|informedAboutDonorRisks",
+            "text": "Ich bin ueber Spenderisiken im Rahmen der Blutspende aufgeklaert worden. Ich hatte Gelegenheit Fragen zu stellen und meine Fragen wurden zur Gaenze beantwortet.",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Consent to be informed about blood donation activities"
+                }
+              }
+            ],
+            "linkId": "consentQuestions|consentToBeInformed",
+            "text": "Ich stimme ausdruecklich zu, dass das oesterreichische Rote Kreuz mich schriftlich, telefonisch, per SMS bzw. per E-Mail ueber Aktivitaeten im Zusammenhang mit Blutspendeaktionen informiert. Ich kann diese Zustimmung jederzeit per E-Mail an blutspendedienst@st.roteskreuz.at oder telefonisch unter 0800 190 190 widerrufen.",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "finalQuestions",
+        "text": "Ich habe alle Fragen nach bestem Wissen und Gewissen beantwortet.",
+        "type": "group",
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Date of Donor Signature"
+                }
+              }
+            ],
+            "linkId": "finalQuestions|donorSignatureDate",
+            "text": "Datum / Unterschrift Spender:in",
+            "type": "date"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Donor Signature"
+                }
+              }
+            ],
+            "linkId": "finalQuestions|donorSignature",
+            "text": "Unterschrift Spender:in",
+            "type": "attachment"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Fit for donation"
+                }
+              }
+            ],
+            "linkId": "finalQuestions|fitForDonation",
+            "text": "Spendetauglich",
+            "type": "choice",
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "yes",
+                  "display": "Ja"
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "no",
+                  "display": "Nein"
+                }
+              }
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Date of Release Signature"
+                }
+              }
+            ],
+            "linkId": "finalQuestions|releaseSignatureDate",
+            "text": "Datum / Unterschrift Freigabe",
+            "type": "date"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression",
+                "valueExpression": {
+                  "language": "text/cql-identifier",
+                  "expression": "Release Signature"
+                }
+              }
+            ],
+            "linkId": "finalQuestions|releaseSignature",
+            "text": "Unterschrift Freigabe",
+            "type": "attachment"
+          }
+        ]
+      }
+    ]
+  }
